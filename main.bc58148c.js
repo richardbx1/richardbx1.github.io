@@ -4550,15 +4550,4 @@
     xxxe: function(t, e, n) {
         t.exports = n.p + "assets/images/mashup-icon.svg"
     }
-});// Activate Carousel
-$("#myCarousel").carousel();
-
-// Enable Carousel Indicators
-$(".item").click(function(){
-  $("#myCarousel").carousel(1);
-});
-
-// Enable Carousel Controls
-$(".left").click(function(){
-  $("#myCarousel").carousel("prev");
 });

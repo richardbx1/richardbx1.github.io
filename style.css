@@ -468,7 +468,8 @@ pre code {
     clear: both}
 .row {
     margin-left: -15px;
-    margin-right: -15px}
+    margin-right: -15px;
+    padding-bottom: 30px}
 .row:after,.row:before {
     content: " ";
     display: table}
@@ -2876,12 +2877,12 @@ body.white {
     border-radius: .25rem;
     background-color: #fff;
     border: 1px solid rgba(0,0,0,.125);
-    margin-bottom: 3rem}
+    margin-bottom: 2rem}
 .card .h2,.card h2 {
     margin-top: 0;
-    margin-bottom: 40px}
+    margin-bottom: 20px}
 .card .card-block {
-    padding: 4rem}
+    padding: 2rem}
 @media (min-width: 992px) {
     .card .card-block {
     padding: 6rem}

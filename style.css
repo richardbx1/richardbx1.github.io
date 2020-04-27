@@ -234,7 +234,7 @@ hr {
 .h1,h1 {
     font-size: 63px}
 .h2,h2 {
-    font-size: 27px}
+    font-size: 30px}
 .h3,.h4,h3,h4 {
     font-size: 20px}
 .h5,h5 {
@@ -2885,7 +2885,7 @@ body.white {
     padding: 2rem}
 @media (min-width: 992px) {
     .card .card-block {
-    padding: 6rem}
+    padding: 4rem}
 }
 .btn {
     -webkit-transition: all .2s linear;

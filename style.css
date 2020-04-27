@@ -972,7 +972,7 @@ table td[class*=col-],table th[class*=col-] {
 @media screen and (max-width: 767px) {
     .table-responsive {
     width: 100%;
-    margin-bottom: 18.75px;
+    margin: 18.75px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #ddd}
@@ -2874,7 +2874,7 @@ body.white {
     bottom: 30%;
     box-shadow: inset 0 -40px 60px 10px #f0f5f5}
 .card {
-    border-radius: .25rem;
+    border-radius: 25px;
     background-color: #fff;
     border: 1px solid rgba(0,0,0,.125);
     margin-bottom: 2rem}
@@ -2882,11 +2882,11 @@ body.white {
     margin-top: 0;
     margin-bottom: 20px}
 .card .card-block {
-    margin: 15px;
-    margin-bottom: 15px}
+    margin: 15px}
 @media (min-width: 992px) {
     .card .card-block {
-    padding: 4rem}
+    padding: 4rem;
+    margin: 15px}
 }
 .btn {
     -webkit-transition: all .2s linear;

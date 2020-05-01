@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Oswald);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Oswald|Domine:700|Quicksand:500);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 /*! * Bootstrap v3.3.7 (http: //getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https: //github.com/twbs/bootstrap/blob/master/LICENSE) */html {
     font-family: sans-serif;
@@ -213,7 +213,7 @@ hr {
 [role=button] {
     cursor: pointer}
 .h1,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {
-    font-family: Oswald,Helvetica,Arial,serif;
+    font-family: Domine,Oswald,Helvetica,serif;
     font-weight: 400;
     line-height: 1.1;
     color: #000}
@@ -234,6 +234,7 @@ hr {
 .h1,h1 {
     font-size: 63px}
 .h2,h2 {
+    font-family: Quicksand,Helvetica,Arial,serif;
     font-size: 38px}
 .h3,.h4,h3,h4 {
     font-size: 20px}

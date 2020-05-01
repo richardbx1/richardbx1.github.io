@@ -160,7 +160,7 @@ a {
     color: #f0f5f5;
     text-decoration: none}
 a:focus,a:hover {
-    color: #b30043;
+    color: #000000;
     text-decoration: underline}
 a:focus {
     outline: 5px auto -webkit-focus-ring-color;
@@ -1503,7 +1503,7 @@ a.btn.disabled,fieldset[disabled] a.btn {
     color: #d9534f;
     background-color: #fff}
 .btn-link {
-    color: deeppink;
+    color:#f5c469;
     font-weight: 400;
     border-radius: 0}
 .btn-link,.btn-link.active,.btn-link:active,.btn-link[disabled],fieldset[disabled] .btn-link {
@@ -2797,7 +2797,7 @@ body.white {
     -o-transition: all .2s linear;
     transition: all .2s linear}
 .social-round-icon:hover {
-    background-color: #f0f5f5;
+    background-color: #cbcbcb;
     color: #fff;
     border-color: #f0f5f5}
 .social-round-icon.white-round-icon {
@@ -2805,7 +2805,7 @@ body.white {
     color: #fff}
 .social-round-icon.white-round-icon:hover {
     background-color: #fff;
-    color: #f0f5f5;
+    color: #cbcbcb;
     border-color: #fff}
 .fa-icon {
     color: #000;
@@ -2866,50 +2866,41 @@ label {
     float: left;
     margin-right: 5px}
 
-
-.photos {
-  /* Prevent vertical gaps */
-  line-height: 0;
-   
-  -webkit-column-count: 5;
-  -webkit-column-gap:   0px;
-  -moz-column-count:    5;
-  -moz-column-gap:      0px;
-  column-count:         5;
-  column-gap:           0px;  
+.button {
+  border-radius: 1px;
+  background-color: #f5c469;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  width: 225px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 10px;
 }
 
-.photos img {
-  /* Just in case there are inline attributes */
-  width: 100% !important;
-  height: auto !important;
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-.media (max-width: 1200px) {
-  #photos {
-  -moz-column-count:    4;
-  -webkit-column-count: 4;
-  column-count:         4;
-  }
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
 }
-.media (max-width: 1000px) {
-  #photos {
-  -moz-column-count:    3;
-  -webkit-column-count: 3;
-  column-count:         3;
-  }
+
+.button:hover span {
+  padding-right: 5px;
 }
-.media (max-width: 800px) {
-  #photos {
-  -moz-column-count:    2;
-  -webkit-column-count: 2;
-  column-count:         2;
-  }
-}
-.media (max-width: 400px) {
-  #photos {
-  -moz-column-count:    1;
-  -webkit-column-count: 1;
-  column-count:         1;
-  }
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }

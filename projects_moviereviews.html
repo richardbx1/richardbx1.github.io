@@ -46,7 +46,7 @@
                                     <div class="text-center">
                                         <span class="control">
                                             <button type="submit" name="submit" id="generate-text" class="button is-link">
-                                                <span class="icon"><i class="fas fa-md fa-pen"></i></span><span>Generate review!</span>
+                                                <span class="icon"><i class="fas fa-md fa-pen"></i></span><span>Generate review</span>
                                             </button>
                                         </span>
                                     </div>      
@@ -150,7 +150,12 @@
         $("textarea, input").each(function() {
             inputs[$(this).attr('id')] = $(this).val();
         });
-        inputs.length=20;
+        inputs.length=40;
+        inputs.temperature = 0.7
+        inputs.top_p = 0.9
+        inputs.nsamples = 1
+        inputs.batch_size = 1
+        inputs.truncate = '.'
         return inputs;
     }
 </script>

@@ -19,42 +19,37 @@
                 <h1>movie reviews by AI</h1>
                 <p>
                     <a href="https://richardbx1.github.io/projects.html">projects</a> |
-                    <a href="https://richardbx1.github.io/events.html">events</a> | 
+                    <a href="https://richardbx1.github.io/events.html">events</a> |
                     <a href="https://richardbx1.github.io/experience.html">experience</a>
                 </p>
             </div>
         </header>
 
         <div class="container">
-             <div class="card">
+            <div class="card">
                 <div class="card-block">
                     <div class="row">
                         <form id="gen-form">
-                            
                             <div class="col-md-4">
-                                <div class="field">
-                                    <div class="text-center">
-                                        <div class="control">
-                                            <textarea id="prefix" class="textarea" type="text" placeholder="Enter a movie here or leave blank."></textarea>
-                                        </div>
-                                    </div>
+                                <div class="text-center">
+                                    <textarea id="prefix" class="textarea" type="text" placeholder="Enter a movie here or leave blank."></textarea>
                                 </div>
                             </div>
-                            
+
                             <div class="col-md-4">
                                 <div class="buttons">
                                     <div class="text-center">
                                         <span class="control">
-                                            <button type="submit" name="submit" id="generate-text" class="button is-link">
+                                            <button type="submit" name="submit" id="generate-text" class="button is-link" style="background-color: #f5c469">
                                                 <span class="icon"><i class="fas fa-md fa-pen"></i></span><span>Generate review</span>
-                                            </button>
+                                        </button>
                                         </span>
-                                    </div>      
+                                    </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-md-4">
-                                <button id="clear-text" class="button is-danger">
+                                <button id="clear-text" class="button is-danger" style="background-color: #ff9999">
                                     <div class="text-center">
                                         <span class="icon">
                                             <i class="fas fa-md fa-trash-alt"></i></span><span>Clear review</span>
@@ -63,8 +58,8 @@
                             </div>
                         </form>
                     </div>
-                    
-                    <div class='row'>  
+
+                    <div class='row'>
                         <div id="model-output" class="column">
                             <div class="text-center">
                                 <p id="tutorial" class="subtitle">
@@ -73,9 +68,9 @@
                             </div>
                         </div>
                     </div>
-                 </div>
+                </div>
             </div>
-                   
+
             <div class="card">
                 <div class="card-block">
                     <div class="row">
@@ -92,9 +87,9 @@
                         </div>
                         <div class="col-md-4">
                             <h3>What I Learnt</h3>
-                            <p>Not only did this project give a glimpse at working with GPT-2, it taught me alot of other great things such as hosting API's via Docker and Google Cloud as well as HTML & Web Design. There were alot of components involved in this project end-to-end and I think it has given me alot of valuable skills for the future.</p>
+                            <p>Not only did this project give a glimpse at working with GPT-2, it taught me alot of other great things such as hosting API's via Docker and Google Cloud as well as HTML & Web Design. There were alot of components involved in this project end-to-end and I think it has given me alot of valuable skills.</p>
                         </div>
-                    </div>                  
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,7 +105,7 @@
             e.preventDefault();
             $.ajax({
                 type: "POST",
-                url: "https://rbe2gpt2test-6f3lk3zwuq-de.a.run.app?length=15",
+                url: "https://rbe2gpt2test-6f3lk3zwuq-de.a.run.app",
                 dataType: "json",
                 data: JSON.stringify(getInputValues()),
                 beforeSend: function(data) {
@@ -150,9 +145,9 @@
         $("textarea, input").each(function() {
             inputs[$(this).attr('id')] = $(this).val();
         });
-        inputs.length=40;
-        inputs.temperature = 0.7
-        inputs.top_p = 0.9
+        inputs.length = 40;
+        inputs.temperature = 0.8
+        inputs.top_p = 20
         inputs.nsamples = 1
         inputs.batch_size = 1
         inputs.truncate = '.'

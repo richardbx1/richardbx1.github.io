@@ -31,26 +31,19 @@
                     <div class="row">
                         <form id="gen-form">
                             
-                            <div class="col-xs-4">
+                            <div class="col-xs-6">
                                 <div class="text-center">
-                                    <textarea id="prefix" class="textarea" type="text" rows="2" cols="30" placeholder="Enter a movie here or leave blank."></textarea>
+                                    <textarea id="prefix" class="textarea" type="text" rows="2" cols="30" style="resize: none;" placeholder="Enter a movie here or leave blank."></textarea>
                                 </div>
                             </div>
 
-                            <div class="col-xs-4">
+                            <div class="col-xs-6">
                                 <div class="text-center">
-                                    <button type="submit" name="submit" id="generate-text" class="button" style="background-color: #f5c469">
-                                        <i class="fas fa-md fa-pen"></i><span>Generate review</span>
+                                    <button type="submit" name="submit" id="generate-text" class="button">
+                                        <span>Generate Text!</span>
                                     </button>
                                 </div>
                             </div>
-                            
-                            <div class="col-xs-4">
-                                <div class="text-center"></div>
-                                    <button id="clear-text" class="button" style="background-color: #ff9999">
-                                            <i class="fas fa-md fa-trash-alt"></i><span>Clear review</span>
-                                        </button>
-                                </div>
                         </form>
                     </div>
 
@@ -118,14 +111,14 @@
                     }
 
                     var gentext = gentext.replace(/\n\n/g, "<div><br></div>").replace(/\n/g, "<div></div>");
-                    var html = '<div class=\"gen-box\">' + gentext + '</div><div class="gen-border"></div>';
+                    var html = '<div class=\"gen-box\"><div class="text-centre">' + gentext + '</div></div><div class="gen-border"></div>';
                     $(html).appendTo('#model-output').hide().fadeIn("slow");
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     $('#generate-text').removeClass("is-loading");
                     $('#generate-text').prop("disabled", false);
                     $('#tutorial').remove();
-                    var html = '<div class="gen-box warning">There was an error generating the text! Please try again!</div><div class="gen-border"></div>';
+                    var html = '<div class="gen-box warning"><div class="text-centre">There was an error generating the text! Please try again!</div><div class="gen-border"></div></div>';
                     $(html).appendTo('#model-output').hide().fadeIn("slow");
                 }
             });
@@ -140,7 +133,7 @@
         $("textarea, input").each(function() {
             inputs[$(this).attr('id')] = $(this).val();
         });
-        inputs.length = 40;
+        inputs.length = 50;
         inputs.temperature = 0.8
         inputs.top_p = 20
         inputs.nsamples = 1

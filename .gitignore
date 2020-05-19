@@ -1,4 +1,14 @@
-.DS_Store
-*/.DS_Store
-og*
-api_ui.html
+#environment
+*.env
+
+# Pycharm
+*.idea
+
+# Jupyter NB Checkpoints
+*.ipynb_checkpoints/
+
+# Mac OS-specific storage files
+*.DS_Store
+
+# Html files
+ignore_*
